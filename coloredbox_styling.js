@@ -45,3 +45,4 @@ maxlength="40"></td>
         }
         customElements.define("com-sap-sample-coloredbox-styling",
             ColoredBoxStylingPanel);
+})();
