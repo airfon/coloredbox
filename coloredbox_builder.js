@@ -28,9 +28,7 @@ maxlength="5"></td>
                 mode: "open"
             });
             this._shadowRoot.appendChild(template.content.cloneNode(true));
-
-            this._shadowRoot.getElementById("form").addEventListener("submit",
-                this._submit.bind(this));
+            this._shadowRoot.getElementById("form").addEventListener("submit",this._submit.bind(this));
         }
         _submit(e) {
             e.preventDefault();
@@ -43,13 +41,11 @@ maxlength="5"></td>
             }));
         }
         set opacity(newOpacity) {
-            this._shadowRoot.getElementById("builder_opacity").value =
-                newOpacity;
+            this._shadowRoot.getElementById("builder_opacity").value = newOpacity;
         }
         get opacity() {
             return this._shadowRoot.getElementById("builder_opacity").value;
         }
     }
-    customElements.define("com-sap-sample-coloredbox-builder",
-        ColoredBoxBuilderPanel);
+    customElements.define("com-sap-sample-coloredbox-builder",ColoredBoxBuilderPanel);
 })();
